@@ -1,0 +1,11 @@
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/ALWAYS_COPY_DATA.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/ga.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/lua53.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/INSTALL.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/ALL_BUILD.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/CMakeFiles/ZERO_CHECK.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/SDL2-2.0.5/CMakeFiles/SDL2-static.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/SDL2-2.0.5/CMakeFiles/SDL2main.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/SDL2-2.0.5/CMakeFiles/uninstall.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/SDL2-2.0.5/CMakeFiles/INSTALL.dir
+C:/Users/wangq19/Desktop/Game Architecture/FinalProject/GameArchitectureFinalProject/build/-win64/SDL2-2.0.5/CMakeFiles/ALL_BUILD.dir
