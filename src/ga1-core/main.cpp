@@ -14,6 +14,11 @@
 #include "framework/ga_output.h"
 #include "jobs/ga_job.h"
 
+#include "gui/ga_font.h"
+#include "gui/ga_button.h"
+#include "gui/ga_checkbox.h"
+#include "gui/ga_label.h"
+
 #include "entity/ga_entity.h"
 #include "entity/ga_lua_component.h"
 
@@ -33,6 +38,7 @@
 #endif
 
 ga_font* g_font = nullptr;
+static void gui(ga_frame_params* params);
 static void set_root_path(const char* exepath);
 
 int main(int argc, const char** argv)
@@ -85,8 +91,13 @@ int main(int argc, const char** argv)
 		// Perform the late update.
 		sim->late_update(&params);
 
+		// Run gui.
+		gui(&params);
+
 		// Draw to screen.
 		output->update(&params);
+
+		
 	}
 
 	delete output;
@@ -97,6 +108,16 @@ int main(int argc, const char** argv)
 	ga_job::shutdown();
 
 	return 0;
+}
+
+
+static void gui(ga_frame_params* params)
+{
+	//std::string st = "Here!" + std::to_string(temp);
+	//const char* cc = st.c_str();
+	//ga_label(cc, 0.0f, 15.0f, params);
+	ga_label("The Button was pressed000!", 0.0f, 30.0f, params);
+	ga_label("The Button was pressed!", 0.0f, 45.0f, params);
 }
 
 char g_root_path[256];
