@@ -1,13 +1,12 @@
-#include "gui/ga_font.h"
-#include "gui/ga_button.h"
-#include "gui/ga_checkbox.h"
-#include "gui/ga_label.h"
+#include "ga_label.h"
 #include "framework/ga_frame_params.h"
 
 
 
 #include <stdio.h>
-
+#include <iostream>
+#include <string>
+#include <vector>
 
 
 static void updateHardInformation(ga_frame_params* params)

@@ -28,13 +28,26 @@
 #define STB_TRUETYPE_IMPLEMENTATION
 #include <stb_truetype.h>
 
-#include "gui/ga_hardware.cpp"
+
+#include "cpuinfo.cpp"
+#include "cpuinfodelegate.cpp"
+#include "systemcommand.cpp"
+#include "systeminfo.h"
+
+
 
 #if defined(GA_MINGW)
 #include <unistd.h>
 #endif
 
-extern void updateHardInformation(ga_frame_params* params);
+#include <iostream>
+#include <string>
+#include <vector>
+#include <memory>
+
+
+
+//extern void updateHardInformation(ga_frame_params* params);
 
 ga_font* g_font = nullptr;
 
@@ -42,6 +55,32 @@ static void set_root_path(const char* exepath);
 
 int main(int argc, const char** argv)
 {
+
+	//First make a delegate object that handles the cases where the computer has multiple CPUs
+	std::unique_ptr<CPUInfoDelegate> cpuInfo = std::make_unique<CPUInfoDelegate>();
+
+	//Then extract the separate CPUs into a vector (of CPUInfo objects)
+	std::vector<CPUInfo> cpuInfoVector{ cpuInfo->cpuInfoVector() };
+
+	//Print out the number of CPUs, directory from the delegate object
+	std::cout << "This computer has " << cpuInfo->numberOfCPUInfoItems() << " CPU(s) installed" << std::endl;
+
+	for (std::vector<CPUInfo>::const_iterator iter = cpuInfoVector.begin(); iter != cpuInfoVector.end(); iter++) {
+		std::cout << "Information for CPU #" << iter->cpuNumber() + 1 << ": " << std::endl;
+		std::cout << "CPU Name = " << iter->name() << std::endl;
+		std::cout << "CPU Manufacturer = " << iter->manufacturer() << std::endl;
+		std::cout << "Number of CPU Cores = " << iter->numberOfCores() << std::endl;
+		std::cout << "Current CPU Clock Speed = " << iter->currentClockSpeed() << std::endl;
+		std::cout << "CPU Architecture = " << iter->architecture() << std::endl;
+		std::cout << "CPU L2 Cache Size = " << iter->L2CacheSize() << std::endl;
+		std::cout << "CPU L3 Cache Size = " << iter->L3CacheSize() << std::endl;
+		std::cout << "Current CPU Temperature = " << iter->currentTemperature() << std::endl;
+		std::cout << std::endl;
+	}
+
+	
+
+
 	set_root_path(argv[0]);
 
 	ga_job::startup(0xffff, 256, 256);
@@ -91,12 +130,12 @@ int main(int argc, const char** argv)
 		sim->late_update(&params);
 
 		// Run gui.
-		 updateHardInformation(&params);
+		//updateHardInformation(&params);
 
 		// Draw to screen.
 		output->update(&params);
 
-		
+
 	}
 
 	delete output;
