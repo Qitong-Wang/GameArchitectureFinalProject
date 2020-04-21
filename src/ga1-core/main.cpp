@@ -33,7 +33,7 @@
 #include "cpuinfodelegate.cpp"
 #include "systemcommand.cpp"
 #include "systeminfo.h"
-
+#include "gui/ga_hardware.cpp"
 
 
 #if defined(GA_MINGW)
@@ -47,15 +47,13 @@
 
 
 
-//extern void updateHardInformation(ga_frame_params* params);
-
 ga_font* g_font = nullptr;
 
 static void set_root_path(const char* exepath);
 
 int main(int argc, const char** argv)
 {
-
+	ga_hardware hardware = ga_hardware();
 	//First make a delegate object that handles the cases where the computer has multiple CPUs
 	std::unique_ptr<CPUInfoDelegate> cpuInfo = std::make_unique<CPUInfoDelegate>();
 
@@ -130,7 +128,7 @@ int main(int argc, const char** argv)
 		sim->late_update(&params);
 
 		// Run gui.
-		//updateHardInformation(&params);
+		hardware.updateInformaiton(&params);
 
 		// Draw to screen.
 		output->update(&params);
