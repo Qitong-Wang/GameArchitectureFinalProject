@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\cpuinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\cpuinfodelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\entity\ga_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -23,6 +29,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\framework\ga_sim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\gpuinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\gpuinfodelegate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\graphics\ga_animation_component.cpp">
@@ -59,6 +71,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\gui\ga_font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\gui\ga_hardware.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\gui\ga_label.cpp">
@@ -103,6 +118,18 @@
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\math\ga_vec4f.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\motherboardinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\motherboardinfodelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\osinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\osinfodelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\physics\ga_intersection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -122,6 +149,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\physics\ga_shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\raminfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\raminfodelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\wangq19\Desktop\Game Architecture\FinalProject\GameArchitectureFinalProject\src\ga1-core\systemcommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

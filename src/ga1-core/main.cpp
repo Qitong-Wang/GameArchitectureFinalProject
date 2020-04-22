@@ -28,13 +28,17 @@
 #define STB_TRUETYPE_IMPLEMENTATION
 #include <stb_truetype.h>
 
-#include "gui/ga_hardware.cpp"
+
+
+
 
 #if defined(GA_MINGW)
 #include <unistd.h>
 #endif
 
-extern void updateHardInformation(ga_frame_params* params);
+#include "gui/ga_hardware.h"
+
+
 
 ga_font* g_font = nullptr;
 
@@ -42,6 +46,10 @@ static void set_root_path(const char* exepath);
 
 int main(int argc, const char** argv)
 {
+	
+	
+
+
 	set_root_path(argv[0]);
 
 	ga_job::startup(0xffff, 256, 256);
@@ -68,10 +76,11 @@ int main(int argc, const char** argv)
 	ga_lua_component lua_move(&lua, "data/scripts/move.lua");
 	ga_cube_component lua_model(&lua, "data/textures/rpi.png");
 	sim->add_entity(&lua);
-
+	ga_hardware hardware = ga_hardware();
 	// Main loop:
 	while (true)
 	{
+
 		// We pass frame state through the 3 phases using a params object.
 		ga_frame_params params;
 
@@ -91,12 +100,12 @@ int main(int argc, const char** argv)
 		sim->late_update(&params);
 
 		// Run gui.
-		 updateHardInformation(&params);
+		hardware.updateInformaiton(&params);
 
 		// Draw to screen.
 		output->update(&params);
 
-		
+
 	}
 
 	delete output;
