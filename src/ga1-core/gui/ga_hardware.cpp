@@ -2,20 +2,21 @@
 #include "framework/ga_frame_params.h"
 
 #include "ga_hardware.h"
-
+#include "systeminfo.h"
+/*
 #include "cpuinfo.cpp"
 #include "cpuinfodelegate.cpp"
 #include "systemcommand.cpp"
-/*
+
 #include "raminfo.cpp"
 #include "raminfodelegate.cpp"
-*/
+
 #include "gpuinfo.cpp"
 #include "gpuinfodelegate.cpp"
 
 #include "osinfo.cpp"
 #include "osinfodelegate.cpp"
-
+*/
 
 
 #include <iostream>
@@ -51,7 +52,7 @@ ga_hardware::ga_hardware() {
 	}
 
 	
-	/*
+	
 	std::unique_ptr<RAMInfoDelegate> ramInfo = std::make_unique<RAMInfoDelegate>();
 	std::vector<RAMInfo> ramInfoVector = ramInfo->ramInfoVector();
 	std::cout << "This computer has " << ramInfo->numberOfRAMInfoItems() << " RAM stick(s) installed" << std::endl;
@@ -73,7 +74,7 @@ ga_hardware::ga_hardware() {
 	std::vector<GPUInfo> gpuInfoVector = gpuInfo->gpuInfoVector();
 	std::cout << "This computer has " << gpuInfo->numberOfGPUInfoItems() << " GPU(s) installed" << std::endl;
 	for (std::vector<GPUInfo>::const_iterator iter = gpuInfoVector.begin(); iter != 
-	Vector.end(); iter++) {
+	gpuInfoVector.end(); iter++) {
 		std::cout << "Information for GPU #" << iter->gpuNumber() + 1 << ": " << std::endl;
 		std::cout << "GPU Name = " << iter->name() << std::endl;
 		//std::cout << "GPU Manufacturer = " << iter->manufacturer() << std::endl;
@@ -86,7 +87,7 @@ ga_hardware::ga_hardware() {
 		std::cout << "GPU Video Processor = " << iter->videoProcessor() << std::endl;
 		std::cout << std::endl;
 	}
-	*/
+	
 	std::unique_ptr<OSInfoDelegate> osInfo = std::make_unique<OSInfoDelegate>();
 	std::vector<OSInfo> osInfoVector = osInfo->osInfoVector();
 	std::cout << "This computer has " << osInfo->numberOfOSInfoItems() << " OS(s) installed" << std::endl;

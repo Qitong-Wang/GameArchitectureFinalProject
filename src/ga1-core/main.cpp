@@ -36,7 +36,7 @@
 #include <unistd.h>
 #endif
 
-#include "gui/ga_hardware.cpp"
+#include "gui/ga_hardware.h"
 
 
 
